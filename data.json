@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "email": "zalieulrich@gmail.com",
+    "telephone": "+237 679 24 58 44 "
+  },
+  
+  "medias": {
+    "profil_path": "images/photo_profile.jpg",
+    
+    
+    "video_principale_path": "videos/intro_allemand.mp4", 
+    
+    "gallerie_photos": [
+      {
+        "titre": "En Classe",
+        "chemin": "images/photo1_classe.jpg"
+      },
+      {
+        "titre": "Recherche Master",
+        "chemin": "images/photo2_master.jpg"
+      },
+      {
+        "titre": "Événement Linguistique",
+        "chemin": "images/photo3_event.jpg"
+      }
+    ]
+  },
+
+  "projets": [
+    {
+      "nom": "My Komposita : Le pro des Mots Composés",
+      "description_courte": "Tu apprends l'allemand et tu as des difficultés à former et traduire les mots composés ? My Komposita t'accompagne dans cette aventure ! (Basé sur le cahier des charges de Master).",
+      "statut": "Version Beta Disponible",
+      
+      "lien_android": "applications/my_komposita_android.apk", 
+      "lien_ios": "#"
+    }
+  ],
+  
+  "documents": [
+    {
+      "titre": "interraction sociolinguitisque",
+      "description": "Quelques recherhces",
+      "lien_fichier": "documents/ALL 346- Interaktionale Soziolinguistik TPE.pdf"  
+    },
+    {
+      "titre": "Mémoire de Master II Allemand",
+      "description": "Le fruit de quelques recherhces",
+      "lien_fichier": "documents/MEMOIREARBEIT_CORRIGE_ FINAL_Sprechen im DaF-Unterricht_ULRICH.pdf" 
+    }
+  ]
+}
+
+
+

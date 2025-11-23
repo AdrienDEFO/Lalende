@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanlende WAFO - Enseignant d'Allemand</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            /* Palette de couleurs */
+            --bleu-fonce: #0033a0;
+            --vert-accent: #009e49;
+            --rouge-accent: #e03b24;
+            --jaune-accent: #ffcc00;
+        }
+
+        .navbar-custom { background-color: var(--bleu-fonce) !important; }
+        
+        /* Classes d'utilité pour les couleurs du texte */
+        .text-vert { color: var(--vert-accent) !important; }
+        .text-rouge { color: var(--rouge-accent) !important; }
+        .text-jaune { color: var(--jaune-accent) !important; }
+        .text-bleu-fonce { color: var(--bleu-fonce) !important; }
+
+        /* Style pour le bouton Jaune */
+        .btn-jaune {
+            background-color: var(--jaune-accent);
+            color: var(--bleu-fonce);
+            border: 2px solid var(--jaune-accent);
+            transition: all 0.3s ease;
+        }
+        .btn-jaune:hover {
+            background-color: var(--bleu-fonce);
+            color: var(--jaune-accent);
+            border: 2px solid var(--jaune-accent);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+            scroll-margin-top: 56px;
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid var(--jaune-accent);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .img-galerie {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#accueil">[Lanlende WAFO] <span class="text-jaune">🇩🇪</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#photo">Photo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">Vidéo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#documents">Documents</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding bg-light" id="accueil">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <img src="placeholder.jpg" class="rounded-circle profile-pic mb-4" alt="Photo de profil" id="image-profil">
+                    
+                    <h1 class="display-5 fw-bold text-vert">Bienvenue sur ma vitrine personnelle !</h1> 
+                    
+                    <h2 class="h3 mb-4 text-rouge">Enseignant d'Allemand | Étudiant en Master II Allemand</h2> 
+                    
+                    <p class="lead mb-5">
+                        Vous trouverez ici mes travaux de recherche, mes ressources pédagogiques, et le projet phare : **My Komposita**, une application mobile innovante pour maîtriser les mots composés allemands.
+                    </p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 mb-3">
+                            <div class="card p-3 shadow-sm border-0 h-100">
+                                <h4 class="h5 fw-bold text-jaune"><i class="fas fa-envelope me-2"></i> E-mail</h4>
+                                <p class="mb-0"><a href="#" class="text-decoration-none text-bleu-fonce" id="contact-email">Chargement...</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card p-3 shadow-sm border-0 h-100">
+                                <h4 class="h5 fw-bold text-jaune"><i class="fas fa-phone me-2"></i> Téléphone</h4>
+                                <p class="mb-0"><a href="#" class="text-decoration-none text-bleu-fonce" id="contact-phone">Chargement...</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="photo">
+        <div class="container">
+            <h2 class="text-center display-6 fw-bold text-rouge mb-5">📸 Galerie Photo</h2> 
+            <p class="text-center mb-5">Cliquez sur une image pour la télécharger.</p>
+            <div class="row" id="photo-galerie-container">
+                <p class="text-center text-muted">Chargement des photos...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light" id="video">
+        <div class="container">
+            <h2 class="text-center display-6 fw-bold text-vert mb-5">▶️ Capsule Vidéo</h2>
+            <p class="text-center mb-5">Vidéo hébergée localement et gérée via data.json.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <video controls class="w-100 shadow-lg rounded" id="video-principale-element" style="max-height: 450px;">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                    <div class="text-center mt-3">
+                        <a href="#" id="btn-video-download" class="btn btn-outline-dark btn-sm me-2 disabled" download>
+                            <i class="fas fa-download me-1"></i> Télécharger la Vidéo
+                        </a>
+                        <p class="fst-italic d-inline-block m-0">"Leçon sur la déclinaison : Astuces et Mnémoniques"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="projets">
+        <div class="container">
+            <h2 class="text-center display-6 fw-bold text-jaune mb-5">💡 Mes Projets Innovants</h2>
+            <div class="row justify-content-center" id="projets-container">
+                <p class="text-center text-muted">Chargement des projets...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light" id="documents">
+        <div class="container">
+            <h2 class="text-center display-6 fw-bold text-bleu-fonce mb-5">📚 Documents Académiques</h2>
+            <p class="text-center mb-5">Retrouvez mes travaux de Master, articles de recherche et autres ressources téléchargeables.</p>
+            <div class="list-group shadow" id="documents-list">
+                <p class="text-center text-muted">Chargement des documents...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-4 bg-dark">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start text-white">Copyright &copy; Lanlende WAFO 2025</div>
+                <div class="col-lg-4 my-3 my-lg-0 text-center">
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end text-white">
+                    <span class="text-vert">Fait avec</span> <span class="text-rouge">❤️</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur de chargement du fichier data.json. Statut: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                
+                // --- 1. MISE À JOUR DU CONTACT ---
+                if (data.contact) {
+                    document.getElementById('contact-email').href = 'mailto:' + data.contact.email;
+                    document.getElementById('contact-email').textContent = data.contact.email;
+                    document.getElementById('contact-phone').href = 'tel:' + data.contact.telephone.replace(/\s/g, ''); 
+                    document.getElementById('contact-phone').textContent = data.contact.telephone;
+                }
+
+                // --- 2. GESTION DES MÉDIAS (Photos et Vidéos) ---
+                if (data.medias) {
+                    // Photo de Profil
+                    const imgProfil = document.getElementById('image-profil');
+                    if (imgProfil && data.medias.profil_path) {
+                        imgProfil.src = data.medias.profil_path;
+                    }
+
+                    // Vidéo Principale (Lecture et Téléchargement)
+                    const videoElement = document.getElementById('video-principale-element');
+                    const btnVideoDownload = document.getElementById('btn-video-download');
+                    if (videoElement && data.medias.video_principale_path) {
+                        
+                        // Lecture intégrée (méthode robuste avec <source>)
+                        videoElement.innerHTML = `<source src="${data.medias.video_principale_path}" type="video/mp4">`;
+                        videoElement.load();
+                        
+                        // Téléchargement forcé
+                        btnVideoDownload.href = data.medias.video_principale_path;
+                        // Définition du nom du fichier lors du téléchargement
+                        btnVideoDownload.setAttribute('download', 'Capsule_Video_Allemand.mp4'); 
+                        btnVideoDownload.classList.remove('disabled'); // Rendre le bouton actif
+                    }
+
+                    // Galerie Photo (Chaque image est un lien de téléchargement)
+                    const galerieContainer = document.getElementById('photo-galerie-container');
+                    if (galerieContainer && data.medias.gallerie_photos) {
+                        galerieContainer.innerHTML = '';
+                        data.medias.gallerie_photos.forEach(photo => { 
+                            const photoHtml = `
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="card border-0 shadow">
+                                        <a href="${photo.chemin}" download="${photo.titre.replace(/\s/g, '_')}_${photo.chemin.split('/').pop()}">
+                                            <img src="${photo.chemin}" class="img-galerie rounded" alt="${photo.titre}">
+                                        </a>
+                                        <div class="card-body text-center"><h5 class="card-title">${photo.titre}</h5></div>
+                                    </div>
+                                </div>
+                            `;
+                            galerieContainer.innerHTML += photoHtml;
+                        });
+                    }
+                }
+
+                // --- 3. GESTION DES PROJETS (Téléchargement APK forcé) ---
+                const projetsContainer = document.getElementById('projets-container');
+                if (data.projets && projetsContainer) {
+                    projetsContainer.innerHTML = ''; 
+                    data.projets.forEach(projet => {
+                        // Création d'un nom de fichier propre pour le téléchargement
+                        const filename = projet.nom.replace(/[^a-zA-Z0-9]/g, '_') + '.apk'; 
+                        
+                        const cardHtml = `
+                            <div class="col-lg-12 mb-5">
+                                <div class="card p-5 border-0 shadow-lg bg-white">
+                                    <div class="row">
+                                        <div class="col-md-4 text-center">
+                                            <i class="fas fa-gamepad display-1 text-vert"></i>
+                                            <h3 class="h4 mt-3 mb-2 text-bleu-fonce">${projet.nom}</h3>
+                                            <p class="badge bg-danger rounded-pill fs-6">${projet.statut}</p>
+                                            <a href="${projet.lien_android}" download="${filename}" class="btn btn-jaune mt-3"><i class="fab fa-android me-2"></i> Télécharger (APK)</a>
+                                            <a href="${projet.lien_ios}" class="btn btn-outline-secondary mt-3 ms-2"><i class="fab fa-apple me-2"></i> iOS (À venir)</a>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="lead text-rouge fw-bold">${projet.description_courte}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        projetsContainer.innerHTML += cardHtml;
+                    });
+                }
+
+                // --- 4. GESTION DES DOCUMENTS (Téléchargement de PDF forcé) ---
+                const documentsList = document.getElementById('documents-list');
+                if (data.documents && documentsList) {
+                    documentsList.innerHTML = ''; 
+                    data.documents.forEach(doc => {
+                        const docItem = document.createElement('a');
+                        docItem.href = doc.lien_fichier; 
+                        docItem.className = 'list-group-item list-group-item-action d-flex justify-content-between align-items-center';
+                        
+                        // CLÉ DU TÉLÉCHARGEMENT : Ajout de l'attribut download pour forcer le téléchargement du PDF
+                        docItem.setAttribute('download', doc.titre.replace(/[^a-zA-Z0-9]/g, '_') + '.pdf'); 
+                        
+                        docItem.innerHTML = `
+                            <div>
+                                <h5 class="mb-1 text-vert">${doc.titre}</h5>
+                                <small class="text-muted">${doc.description}</small>
+                            </div>
+                            <span class="badge bg-rouge rounded-pill"><i class="fas fa-file-pdf me-1"></i> Télécharger</span>
+                        `;
+                        documentsList.appendChild(docItem);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors du traitement du JSON :', error);
+                const errorMsg = `<p class="text-danger text-center">Erreur de chargement des données. Veuillez vérifier que le fichier data.json existe et est correctement formaté.</p>`;
+                if(document.getElementById('projets-container')) document.getElementById('projets-container').innerHTML = errorMsg;
+                if(document.getElementById('documents-list')) document.getElementById('documents-list').innerHTML = errorMsg;
+            });
+    });
+    </script>
+</body>
+</html>
