@@ -39,14 +39,39 @@
   
   "documents": [
     {
-      "titre": "interraction sociolinguitisque",
-      "description": "Quelques recherhces",
+      "titre": "Interaktionale Soziolinguistik TPE",
+      "description": "Travail de recherche approfondi sur la sociolinguistique interactive en allemand, explorant les interactions sociales dans la langue.",
       "lien_fichier": "documents/ALL 346- Interaktionale Soziolinguistik TPE.pdf"  
     },
     {
-      "titre": "Mémoire de Master II Allemand",
-      "description": "Le fruit de quelques recherhces",
+      "titre": "Komparatistik TPE - Der Steppenwolf vs La fille du paysan",
+      "description": "Analyse comparative littéraire entre l'œuvre 'Le Loup des steppes' de Hermann Hesse et 'La fille du paysan' de Marie-Claire Dewarrat.",
+      "lien_fichier": "documents/ALL 366- Komparatistik TPE-  Der Stppenwolf vs La fille du paysan.pdf" 
+    },
+    {
+      "titre": "Bericht der Vorträge zum Seminar Deutschsprachige Landeskunde",
+      "description": "Rapport détaillé des conférences présentées lors du séminaire sur la civilisation et la culture germanophones.",
+      "lien_fichier": "documents/Bericht der Vorträge zum Seminar ALL 422-Deutschsprachige Landeskunde-ULRICH.pdf" 
+    },
+    {
+      "titre": "Mémoire de Master II Allemand - Version Finale",
+      "description": "Mémoire de recherche sur l'enseignement de l'oral en allemand langue étrangère (DaF), version finale non corrigée.",
+      "lien_fichier": "documents/MEMOIREARBEIT_ FINAL_Sprechen im DaF-Unterricht_ULRICH WAFFO ZALIE.pdf" 
+    },
+    {
+      "titre": "Mémoire de Master II Allemand - Version Corrigée Finale",
+      "description": "Version corrigée et définitive du mémoire de Master sur les stratégies d'enseignement de l'expression orale en allemand.",
       "lien_fichier": "documents/MEMOIREARBEIT_CORRIGE_ FINAL_Sprechen im DaF-Unterricht_ULRICH.pdf" 
+    },
+    {
+      "titre": "TPE Sociolinguistik",
+      "description": "Travail personnel encyclopédique sur les aspects sociolinguistiques de la langue allemande.",
+      "lien_fichier": "documents/TPE SOZIOLINGUISTIK- WAFFO ULRICH.pdf" 
+    },
+    {
+      "titre": "TPE Littérature Africaine d'Expression Allemande",
+      "description": "Étude approfondie de la littérature africaine écrite en allemand, explorant les œuvres et les auteurs clés.",
+      "lien_fichier": "documents/TPE_ALL 442- Littérature africaine d'expression allemande- ULRICH.pdf" 
     }
   ]
 }
